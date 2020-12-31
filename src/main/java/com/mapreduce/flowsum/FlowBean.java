@@ -69,4 +69,11 @@ public class FlowBean implements Writable {
     public void setSumFlow(long sumFlow) {
         this.sumFlow = sumFlow;
     }
+
+    public void set(long upFlow, long downFlow) {
+        this.setDownFlow(downFlow);
+        this.setUpFlow(upFlow);
+        this.sumFlow = this.upFlow + this.downFlow;
+    }
+
 }
